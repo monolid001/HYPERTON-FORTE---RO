@@ -1585,6 +1585,7 @@ input:-moz-ui-invalid {
   width: 110px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  text-align: center;
 }
 
 .feat .col-prod-2 {
@@ -1602,6 +1603,7 @@ input:-moz-ui-invalid {
   line-height: 1;
   background-color: #fff;
   position: relative;
+  text-align: center;
 }
 
 .feat .col-prod-3::before {
@@ -4660,8 +4662,8 @@ input:-moz-ui-invalid {
     top: auto;
     -webkit-transition-delay: 0.4s;
     transition-delay: 0.4s;
-    max-width: 450px;
-    left: 0px;
+    max-width: 400px;
+    left: 80px;
     bottom: -253px;
   }
 
@@ -5567,9 +5569,9 @@ input:-moz-ui-invalid {
   }
 
   .action__pack {
-    max-width: 555px;
+    max-width: 410px;
     top: -90px;
-    left: -40px;
+    left: -60px;
   }
 
   .action__content {
@@ -5634,7 +5636,7 @@ input:-moz-ui-invalid {
 
   .action .form__note {
     top: 200px;
-    left: -150px;
+    left: -220px;
   }
 
   .action__runline {
@@ -5904,8 +5906,8 @@ input:-moz-ui-invalid {
   }
 
   .promo-last .promo__pack {
-    max-width: 496px;
-    bottom: -298px;
+    max-width: 300px;
+    bottom: -110px;
     transform: translateX(-60%);
   }
 
@@ -6033,4 +6035,8 @@ input:-moz-ui-invalid {
   .feat .col-effect {
     border-left: 1px solid #fff;
   }
+}
+
+.td .th .col-prod-3 .col-prod {
+  text-align: center;
 }
