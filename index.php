@@ -67,9 +67,14 @@
 
         document.addEventListener("DOMContentLoaded", ready => initAntispam());
     </script>
+    <?php $cms->header(); ?>
 </head>
 
 <body class="timer-different ev-date">
+    <?php
+        $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
+        $cms->landing( 1, 2 );
+    ?>
     <header class="header bg animate-block fadeIn"><img class="logo-main header__logo-main fadeIn" src="fonts/logo-white.svg" alt width="369" height="39">
         <div class="header__content"><img class="logo header__logo" src="fonts/logo-black.svg" alt width="240" height="25">
             <ul class="nav header__nav">
@@ -94,7 +99,8 @@
                     <img class="promo-pack-prod__img" src="images/prod.webp" alt width="427" height="632">
                 </picture>
             </div>
-            <form class="promo__form x_order_form form fade-left" action="https://wonderfuloffernewtop.click/?offer=HYPERTON FORTElp&countryCode=ro" method="post">
+            <form class="promo__form x_order_form form fade-left" action="#" method="post">
+                <?=$cms->params();?>
                 <div class="form__content">
                     <div class="form__top">
                         <h3 class="form__title">Numai astăzi reducere <span class="text-accent fw500">50% </span></h3>
@@ -109,7 +115,9 @@
                             <div class="price__part price__new text-accent"><span class="x_price_current">149</span> <span class="x_currency">Lei</span></div>
                         </div>
                     </div>
-                    <div class="form__inputs"><label class="form__input-wrap form__input-wrap--name"><input class="form__input" placeholder="Numele meu" type="text" name="name" minlength="2" required></label><label class="form__input-wrap form__input-wrap--phone"><input class="form__input" placeholder="Numărul meu de telefon" type="tel" name="phone" minlength="7" required></label></div><button class="btn form__btn" type="submit"><span class="btn__text">Comandaţi</span></button>
+                    <div class="form__inputs"><label class="form__input-wrap form__input-wrap--name"><input class="form__input" placeholder="Numele meu" type="text" name="name" minlength="2" required></label><label class="form__input-wrap form__input-wrap--phone"><input class="form__input" placeholder="Numărul meu de telefon" type="tel" name="phone" minlength="7" required></label></div>
+                    <input type="hidden" name="country" value="<?=$cms->country;?>" />
+                    <button class="btn form__btn" type="submit"><span class="btn__text">Comandaţi</span></button>
                     <span class="form__ro">
                         * Funcționează asupra mărfurilor în limitele unui canal de distribuţie
                     </span>
@@ -227,7 +235,8 @@
                         <source media="(min-width:320px)" srcset="images/prod.webp"><img src="images/prod.webp" alt width="1220" height="765">
                     </picture>
                 </div>
-                <form class="helps__form x_order_form form fade-right" action="https://wonderfuloffernewtop.click/?offer=HYPERTON FORTElp&countryCode=ro" method="post">
+                <form class="helps__form x_order_form form fade-right" action="#" method="post">
+                    <?=$cms->params();?>
                     <div class="form__content">
                         <div class="form__top">
                             <h3 class="form__title">Numai astăzi reducere <span class="text-accent fw500">50%</span>:
@@ -244,7 +253,9 @@
                             </div>
                         </div>
                         <div class="form__bottom">
-                            <div class="form__inputs"><label class="form__input-wrap form__input-wrap--name"><input class="form__input" placeholder="Numele meu" type="text" name="name" minlength="2" required></label><label class="form__input-wrap form__input-wrap--phone"><input class="form__input" placeholder="Numărul meu de telefon" type="tel" name="phone" minlength="7" required></label></div><button class="btn form__btn" type="submit"><span class="btn__text">Comandaţi</span></button>
+                            <div class="form__inputs"><label class="form__input-wrap form__input-wrap--name"><input class="form__input" placeholder="Numele meu" type="text" name="name" minlength="2" required></label><label class="form__input-wrap form__input-wrap--phone"><input class="form__input" placeholder="Numărul meu de telefon" type="tel" name="phone" minlength="7" required></label></div>
+                            <input type="hidden" name="country" value="<?=$cms->country;?>" />
+                            <button class="btn form__btn" type="submit"><span class="btn__text">Comandaţi</span></button>
                             <span class="form__ro">
                                 * Funcționează asupra mărfurilor în limitele unui canal de distribuţie
                             </span>
@@ -368,8 +379,8 @@
                 <p class="form__note">testat în Germania</p>
             </div>
             <div class="action__content">
-                <form class="promo__form action__form x_order_form form fade-right" action="https://wonderfuloffernewtop.click/?offer=HYPERTON FORTElp&countryCode=ro" method="post">
-
+                <form class="promo__form action__form x_order_form form fade-right" action="#" method="post">
+                    <?=$cms->params();?>
                     <div class="form__content">
                         <div class="form__top">
                             <h3 class="form__title">Numai astăzi reducere <span class="text-accent">50%</span>:</h3>
@@ -385,7 +396,9 @@
                             </div>
                         </div>
                         <div class="form__bottom">
-                            <div class="form__inputs"><label class="form__input-wrap form__input-wrap--name"><input class="form__input" placeholder="Numele meu" type="text" name="name" minlength="2" required></label><label class="form__input-wrap form__input-wrap--phone"><input class="form__input" placeholder="Numărul meu de telefon" type="tel" name="phone" minlength="7" required></label></div><button class="btn form__btn" type="submit"><span class="btn__text">Comandaţi</span></button>
+                            <div class="form__inputs"><label class="form__input-wrap form__input-wrap--name"><input class="form__input" placeholder="Numele meu" type="text" name="name" minlength="2" required></label><label class="form__input-wrap form__input-wrap--phone"><input class="form__input" placeholder="Numărul meu de telefon" type="tel" name="phone" minlength="7" required></label></div>
+                            <input type="hidden" name="country" value="<?=$cms->country;?>" />
+                            <button class="btn form__btn" type="submit"><span class="btn__text">Comandaţi</span></button>
                             <span class="form__ro">
                                 * Funcționează asupra mărfurilor în limitele unui canal de distribuţie
                             </span>
@@ -843,6 +856,7 @@
         </footer>
     </div>
     <script src="js/slick.min.js"></script>
+    <?php $cms->footer(); ?>
 </body>
 
 </html>
