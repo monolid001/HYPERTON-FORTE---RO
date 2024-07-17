@@ -1,3 +1,11 @@
+<?php
+    $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
+    $cms->landing( 1, 2 );
+
+    $cms->thankspage = DIR . './success/success.php';
+    define( 'THANKSPAGE', $_SERVER['DOCUMENT_ROOT'] . './success/success.php' );
+?>
+
 <!DOCTYPE html>
 <html lang="ro" dir="ltr" class="  webp webp-alpha webp-animation webp-lossless">
 
@@ -71,10 +79,6 @@
 </head>
 
 <body class="timer-different ev-date">
-    <?php
-        $cms = require_once $_SERVER['DOCUMENT_ROOT'] . '/init.php';
-        $cms->landing( 1, 2 );
-    ?>
     <header class="header bg animate-block fadeIn"><img class="logo-main header__logo-main fadeIn" src="fonts/logo-white.svg" alt width="369" height="39">
         <div class="header__content"><img class="logo header__logo" src="fonts/logo-black.svg" alt width="240" height="25">
             <ul class="nav header__nav">
@@ -103,7 +107,7 @@
                 <?=$cms->params();?>
                 <div class="form__content">
                     <div class="form__top">
-                        <h3 class="form__title">Numai astăzi reducere <span class="text-accent fw500">50% </span></h3>
+                        <h3 class="form__title">Numai astăzi reducere <span class="text-accent fw500"><?=$cms->discount;?></span></h3>
                         <ul class="form__term term">
                             <li class="term__item">
                                 Începutul promoției <span class="date-14">23.09.2022</span>
@@ -111,8 +115,8 @@
                             <li class="term__item">Promoția se termină <span class="date-0">07.10.2022</span></li>
                         </ul>
                         <div class="price form__price">
-                            <div class="price__part price__old"><span class="x_price_previous">298</span> <span class="x_currency">Lei</span></div>
-                            <div class="price__part price__new text-accent"><span class="x_price_current">149</span> <span class="x_currency">Lei</span></div>
+                            <div class="price__part price__old"><span class="x_price_previous"><?=$cms->oldpr;?></span> <span class="x_currency">Lei</span></div>
+                            <div class="price__part price__new text-accent"><span class="x_price_current"><?=$cms->price;?></span> <span class="x_currency">Lei</span></div>
                         </div>
                     </div>
                     <div class="form__inputs"><label class="form__input-wrap form__input-wrap--name"><input class="form__input" placeholder="Numele meu" type="text" name="name" minlength="2" required></label><label class="form__input-wrap form__input-wrap--phone"><input class="form__input" placeholder="Numărul meu de telefon" type="tel" name="phone" minlength="7" required></label></div>
@@ -248,8 +252,8 @@
                                 <li class="term__item">Promoția se termină <span class="date-0">07.10.2022</span></li>
                             </ul>
                             <div class="price form__price form__price--border">
-                                <div class="price__part price__old"><span class="x_price_previous">298</span> <span class="x_currency">Lei</span></div><span class="price__div"></span>
-                                <div class="price__part price__new text-accent"><span class="x_price_current">149</span> <span class="x_currency">Lei</span></div>
+                                <div class="price__part price__old"><span class="x_price_previous"><?=$cms->oldpr;?></span> <span class="x_currency">Lei</span></div><span class="price__div"></span>
+                                <div class="price__part price__new text-accent"><span class="x_price_current"><?=$cms->price;?></span> <span class="x_currency">Lei</span></div>
                             </div>
                         </div>
                         <div class="form__bottom">
@@ -391,8 +395,8 @@
                                 <li class="term__item">Promoția se termină <span class="date-0">07.10.2022</span></li>
                             </ul>
                             <div class="price form__price form__price--border">
-                                <div class="price__part price__old"><span class="x_price_previous">298</span> <span class="x_currency">Lei</span></div><span class="price__div"></span>
-                                <div class="price__part price__new text-accent"><span class="x_price_current">149</span> <span class="x_currency">Lei</span></div>
+                                <div class="price__part price__old"><span class="x_price_previous"><?=$cms->oldpr;?></span> <span class="x_currency">Lei</span></div><span class="price__div"></span>
+                                <div class="price__part price__new text-accent"><span class="x_price_current"><?=$cms->price;?></span> <span class="x_currency">Lei</span></div>
                             </div>
                         </div>
                         <div class="form__bottom">
@@ -805,7 +809,7 @@
 
                     <div class="form__content">
                         <div class="form__top">
-                            <h3 class="form__title">Numai astăzi reducere <span class="text-accent fw500">50% </span>
+                            <h3 class="form__title">Numai astăzi reducere <span class="text-accent fw500"><?=$cms->discount;?></span>
                             </h3>
                             <ul class="form__term term">
                                 <li class="term__item">
@@ -814,8 +818,8 @@
                                 <li class="term__item">Promoția se termină <span class="date-0">07.10.2022</span></li>
                             </ul>
                             <div class="price form__price">
-                                <div class="price__part price__old"><span class="x_price_previous">298</span> <span class="x_currency">Lei</span></div>
-                                <div class="price__part price__new text-accent"><span class="x_price_current">149</span> <span class="x_currency">Lei</span></div>
+                                <div class="price__part price__old"><span class="x_price_previous"><?=$cms->oldpr;?></span> <span class="x_currency">Lei</span></div>
+                                <div class="price__part price__new text-accent"><span class="x_price_current"><?=$cms->price;?></span> <span class="x_currency">Lei</span></div>
                             </div>
                         </div>
                         <div class="form__inputs"><label class="form__input-wrap form__input-wrap--name"><input class="form__input" placeholder="Numele meu" type="text" name="name" minlength="2" required></label><label class="form__input-wrap form__input-wrap--phone"><input class="form__input" placeholder="Numărul meu de telefon" type="tel" name="phone" minlength="7" required></label></div><button class="btn form__btn" type="submit"><span class="btn__text">Comandaţi</span></button>
